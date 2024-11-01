@@ -1,0 +1,211 @@
+body {
+  /* Mengatur font utama untuk elemen body menggunakan font keluarga serif */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  /* Latar belakang gradien dari kiri atas ke kanan bawah dengan warna lembut */
+  background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+  /* Menghilangkan margin dan padding default */
+  margin: 0;
+  padding: 0;
+  /* Mengatur body sebagai flex container dan menempatkan konten di tengah layar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Mengatur tinggi body agar penuh satu layar */
+  height: 100vh;
+}
+
+.container {
+  /* Mengatur elemen container sebagai posisi relatif untuk penggunaan elemen pseudo di dalamnya */
+  position: relative;
+  /* Memberikan latar belakang semi-transparan dan bentuk sudut melengkung */
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  /* Menambahkan padding dan batasan lebar maksimum */
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  /* Memberikan margin kecil untuk ruang tambahan */
+  margin: 10px;
+  /* Menambahkan efek bayangan untuk tampilan 3D */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  /* Mengatur teks di dalam kontainer agar berada di tengah */
+  text-align: center;
+  /* Menyembunyikan elemen yang melampaui batas kontainer */
+  overflow: hidden;
+}
+
+.container::before {
+  /* Elemen pseudo sebelum kontainer untuk membuat efek border gradien */
+  content: "";
+  /* Mengatur posisi agar menutupi batas luar kontainer */
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  /* Membuat border melengkung sesuai kontainer */
+  border-radius: 15px;
+  /* Menggunakan gradien warna bergerak */
+  background: linear-gradient(
+    45deg,
+    rgb(255, 0, 150),
+    rgb(0, 229, 255),
+    rgb(255, 255, 0),
+    rgb(255, 0, 150)
+  );
+  background-size: 300% 300%;
+  /* Menjalankan animasi gradien border */
+  animation: gradientBorder 5s ease infinite;
+  /* Memastikan elemen pseudo berada di bawah konten utama */
+  z-index: -1;
+}
+
+h1 {
+  /* Mengatur font khusus untuk heading */
+  font-family: "Rufina", serif;
+  font-size: 35px;
+  /* Menambahkan spasi antara huruf */
+  letter-spacing: 1px;
+  /* Mengatur teks menjadi rata tengah */
+  text-align: center;
+  /* Mengatur warna teks */
+  color: #333;
+  /* Menambahkan margin bawah untuk spasi */
+  margin-bottom: 20px;
+}
+
+.separator {
+  /* Menyembunyikan garis default pada elemen <hr> */
+  border: 0;
+  /* Menambahkan garis atas yang lebih tebal sebagai pemisah */
+  border-top: 3px solid #333;
+  margin: 20px 0;
+  /* Mengatur lebar penuh */
+  width: 100%;
+}
+
+.input-group {
+  /* Menambahkan spasi antar input group */
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  /* Memberikan tampilan tebal pada label */
+  font-weight: bold;
+  /* Menambahkan spasi bawah */
+  margin-bottom: 5px;
+  /* Mengatur label agar tampil sebagai blok penuh */
+  display: block;
+  /* Mengatur warna dan ukuran font pada label */
+  color: #333;
+  font-size: 18px;
+  /* Menyelaraskan teks ke kiri */
+  text-align: left;
+}
+
+.input-group input {
+  /* Mengatur lebar input agar penuh dalam kontainer */
+  width: 100%;
+  padding: 8px;
+  /* Mengatur ukuran font pada input */
+  font-size: 18px;
+  /* Menambahkan border dan sudut membulat */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* Menjadikan box-sizing border-box untuk pengaturan ukuran */
+  box-sizing: border-box;
+}
+
+.input-group input::placeholder {
+  /* Mengatur gaya placeholder dengan font miring dan warna abu-abu */
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #888;
+  font-size: 18px;
+}
+
+button {
+  /* Mengatur lebar dan padding tombol */
+  width: 100%;
+  padding: 10px;
+  /* Mengatur ukuran font dan warna teks pada tombol */
+  font-size: 16px;
+  color: #333;
+  /* Mengatur warna latar belakang dan border radius */
+  background-color: #f0f0f3;
+  border: none;
+  border-radius: 12px;
+  /* Mengatur font tombol */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  /* Menambahkan efek bayangan untuk tampilan 3D */
+  box-shadow: 6px 6px 12px #c8c9cc, -6px -6px 12px #ffffff;
+  /* Mengubah kursor menjadi pointer saat di-hover */
+  cursor: pointer;
+  /* Menambahkan transisi halus pada efek hover */
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  /* Mengubah bayangan menjadi inset untuk tampilan klik saat di-hover */
+  box-shadow: inset 6px 6px 12px #c0c0c0, inset -6px -6px 12px #ffffff;
+}
+
+.result {
+  /* Mengatur font dan ukuran hasil nilai */
+  font-weight: bold;
+  font-size: 18px;
+  /* Menambahkan margin atas untuk spasi */
+  margin-top: 20px;
+  text-align: center;
+}
+
+.result .pass {
+  /* Warna hijau untuk hasil lulus */
+  color: green;
+}
+
+.result .fail {
+  /* Warna merah untuk hasil gagal */
+  color: red;
+}
+
+.result .average {
+  /* Warna khusus dan bold untuk nilai rata-rata */
+  color: #416b83;
+  font-weight: bold;
+}
+
+.result .grade {
+  /* Warna khusus dan bold untuk nilai huruf */
+  color: #416b83;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  /* Mengatur tampilan untuk layar kecil (ponsel) */
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@keyframes gradientBorder {
+  /* Animasi gradien border */
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

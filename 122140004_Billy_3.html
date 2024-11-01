@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+  <!-- Mendefinisikan tipe dokumen sebagai HTML5 dan bahasa sebagai Bahasa Indonesia -->
+  <head>
+    <!-- Mengatur karakter encoding menjadi UTF-8 agar dapat mendukung berbagai karakter -->
+    <meta charset="UTF-8" />
+    <!-- Mengatur viewport agar tampilan sesuai dengan ukuran layar perangkat -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Judul halaman yang akan ditampilkan pada tab browser -->
+    <title>Kalkulator Nilai Mahasiswa</title>
+    <!-- Menghubungkan halaman HTML dengan file CSS eksternal untuk styling -->
+    <link rel="stylesheet" href="122140004_Billy_3.css" />
+    <!-- Menghubungkan font Rufina dari Google Fonts untuk mempercantik teks -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!-- Memulai bagian tubuh dari dokumen HTML -->
+  <body>
+    <!-- Membungkus seluruh konten dengan kelas 'container' untuk memudahkan styling -->
+    <div class="container">
+      <!-- Judul besar pada halaman -->
+      <h1>KALKULATOR NILAI MAHASISWA</h1>
+      <!-- Garis pemisah yang diberi kelas 'separator' untuk styling -->
+      <hr class="separator" />
+      <!-- Membungkus kelompok input pertama dengan kelas 'input-group' untuk styling -->
+      <div class="input-group">
+        <!-- Label untuk input nilai tugas dengan bobot 30% -->
+        <label for="nilaiTugas">Nilai Tugas (30%)</label>
+        <!-- Input untuk memasukkan nilai tugas, dengan tipe angka dan placeholder -->
+        <input
+          type="number"
+          id="nilaiTugas"
+          placeholder="Masukkan Nilai tugas (0-100)"
+        />
+      </div>
+
+      <!-- Membungkus kelompok input kedua untuk nilai UTS -->
+      <div class="input-group">
+        <!-- Label untuk input nilai UTS dengan bobot 30% -->
+        <label for="nilaiUTS">Nilai UTS (30%)</label>
+        <!-- Input untuk memasukkan nilai UTS, tipe angka dan ada placeholder -->
+        <input
+          type="number"
+          id="nilaiUTS"
+          placeholder="Masukkan Nilai UTS (0-100)"
+        />
+      </div>
+
+      <!-- Membungkus kelompok input ketiga untuk nilai UAS -->
+      <div class="input-group">
+        <!-- Label untuk input nilai UAS dengan bobot 40% -->
+        <label for="nilaiUAS">Nilai UAS (40%)</label>
+        <!-- Input untuk memasukkan nilai UAS, tipe angka dan ada placeholder -->
+        <input
+          type="number"
+          id="nilaiUAS"
+          placeholder="Masukkan Nilai UAS (0-100)"
+        />
+      </div>
+
+      <!-- Tombol untuk menjalankan fungsi JavaScript 'hitungNilai' saat diklik -->
+      <button onclick="hitungNilai()">Hitung Nilai</button>
+
+      <!-- Div kosong dengan id 'result' untuk menampilkan hasil perhitungan nilai -->
+      <div id="result" class="result"></div>
+    </div>
+
+    <!-- Menyambungkan halaman HTML ini dengan file JavaScript eksternal untuk menambahkan fungsi interaktif -->
+    <script src="122140004_Billy_3.js"></script>
+  </body>
+</html>
